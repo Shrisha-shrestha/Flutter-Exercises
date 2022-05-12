@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 void main() => runApp(const MaterialApp(
       home: lesson4(),
@@ -108,12 +106,12 @@ class lesson4 extends StatelessWidget {
            Center(
              child:Container(
                //IMPORTANT
-               margin: EdgeInsets.all(7.0),
-               padding:EdgeInsets.all(30.0),
+               margin: EdgeInsets.all(5.0),
+               padding:EdgeInsets.all(10.0),
                color: Colors.black,
                child: Image.asset(
                  'assets/600.jfif',
-                 height: 180.0,
+                 height: 280.0,
                  width: 300.0,
                ),
              ),
