@@ -19,7 +19,7 @@ class IDcard extends StatelessWidget {
         shadowColor: Colors.black45,
       ),
       body: Padding(
-        padding: const EdgeInsets.all(10.0),
+        padding: const EdgeInsets.all(20.0),
         child: Container(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
@@ -31,12 +31,12 @@ class IDcard extends StatelessWidget {
                   radius: 60.0,
                 ),
               ),
-              SizedBox(height:30.0),
+              SizedBox(height:10.0),
               Divider(
                 height: 14.0,
                 color: Colors.grey,
               ),
-              SizedBox(height:30.0),
+              SizedBox(height:10.0),
               Text('NAME',
               style: TextStyle(
                 fontSize: 15.0,
@@ -51,11 +51,7 @@ class IDcard extends StatelessWidget {
                     letterSpacing: 1.0,
                     fontWeight:FontWeight.w500,
                     color: Color.fromRGBO(234,200,87,1.0)),
-                // style: TextStyle(
-                //   fontSize:30.0,
-                //   letterSpacing: 1.0,
-                //   color: Color.fromRGBO(234,200,87,1.0)
-                ),
+              ),
               SizedBox(height:15.0),
               Text('ADDRESS',
                 style: TextStyle(
@@ -89,8 +85,8 @@ class IDcard extends StatelessWidget {
                 children: <Widget>[
                   Padding(
                     padding: const EdgeInsets.all(4.0),
-                    child: Icon(Icons.mail,
-                    color:Colors.white),
+                    child: Icon(Icons.email,
+                    color:Color.fromRGBO(234,200,87,1.0)),
                   ),
                   Text('shrishashrestha101@gmail.com',
                     style: TextStyle(
