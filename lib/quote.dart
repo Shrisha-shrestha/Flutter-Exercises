@@ -1,4 +1,4 @@
-class quote{
-String a,b;
-  quote({required this.a,required this.b});
+class Data{
+  String Author,Quote;
+  Data( {required this.Quote, required this.Author});
 }

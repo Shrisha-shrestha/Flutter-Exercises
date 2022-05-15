@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'quote.dart';
 
 void main() => runApp(MaterialApp(
   home:Quotes()
@@ -12,7 +13,10 @@ class Quotes extends StatefulWidget {
 }
 
 class _QuotesState extends State<Quotes> {
-
+   List <Data> Quotes =[Data(Quote:'You only live once, but if you do it right, once is enough',Author:'Mae West'),
+     Data(Quote:'Be the change that you wish to see in the world.',Author:'Mahatma Gandhi'),
+     Data(Quote:'If you tell the truth, you dont have to remember anything',Author:'Mark Twain'),
+   ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,7 +27,8 @@ class _QuotesState extends State<Quotes> {
       ),
       body: Column(
         children:
-      ),
+          Quotes.map((test) =>  Text('${test.Quote}-${test.Author}')).toList(),
+    ),
     );
   }
 }
