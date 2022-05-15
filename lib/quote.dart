@@ -1,4 +1,4 @@
 class Data{
-  String Author,Quote;
-  Data( {required this.Quote, required this.Author});
+  String Quote,Author;
+  Data({required this.Quote, required this.Author});
 }

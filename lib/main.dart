@@ -2,146 +2,62 @@ import 'package:flutter/material.dart';
 import 'quote.dart';
 
 void main() => runApp(MaterialApp(
-  home:Quotes()
+  home: quotecard(),
 ));
 
-class Quotes extends StatefulWidget {
-  const Quotes({Key? key}) : super(key: key);
-
+class quotecard extends StatefulWidget {
+  const quotecard({Key? key}) : super(key: key);
   @override
-  State<Quotes> createState() => _QuotesState();
+  State<quotecard> createState() => _quotecardState();
 }
 
-class _QuotesState extends State<Quotes> {
-   List <Data> Quotes =[Data(Quote:'You only live once, but if you do it right, once is enough',Author:'Mae West'),
-     Data(Quote:'Be the change that you wish to see in the world.',Author:'Mahatma Gandhi'),
-     Data(Quote:'If you tell the truth, you dont have to remember anything',Author:'Mark Twain'),
-   ];
-  @override
+class _quotecardState extends State<quotecard> {
+  List<Data> Quotes = [Data(Quote:'a',Author:'b'),Data(Quote:'c',Author:'d'),Data(Quote:'e',Author:'f')];
+
+  Widget card(test) {
+    return Card(
+      margin: EdgeInsets.all(5.0),
+      child: Padding(
+      padding: EdgeInsets.all(5.0),
+      child: Column(
+      children: <Widget>[
+        Text(test.Quote,
+        style: TextStyle(
+          fontSize: 25.0,
+          color: Colors.deepOrangeAccent,
+        ),
+        ),
+        Text(test.Author,
+          style: TextStyle(
+            fontSize: 15.0,
+            color: Colors.grey,
+          ),
+        ),
+      ],
+      ),
+      ),
+    );
+  }
+    @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text('QUOTES'),
         centerTitle: true,
-        backgroundColor: Colors.orangeAccent,
+        backgroundColor: Colors.teal,
       ),
       body: Column(
-        children:
-          Quotes.map((test) =>  Text('${test.Quote}-${test.Author}')).toList(),
-    ),
+        children: Quotes.map((test) => card(test) ).toList(),
+      ),
     );
   }
 }
 
 
 
-// MAPPING A LIST
-// body: Column(
-// children: quotes.map((test) => Text(test)).toList()),
-// );
-
-
-//STATEFUL WIDGET IMPLEMENTATION ON ID CARD
 //
-// Scaffold(
-//       backgroundColor:Color.fromRGBO(31,31,31,1.0),
-//       appBar: AppBar(
-//         backgroundColor: Color.fromRGBO(50,50,50,1.0),
-//         title: Text('Student ID Card'),
-//         centerTitle: true,
-//         elevation: 35.0,
-//         shadowColor: Colors.black45,
-//       ),
-//       body: Padding(
-//         padding: const EdgeInsets.all(20.0),
-//         child: Container(
-//           child: Column(
-//             mainAxisAlignment: MainAxisAlignment.start,
-//             crossAxisAlignment: CrossAxisAlignment.start,
-//             children: <Widget>[
-//               Center(
-//                 child: CircleAvatar(
-//                   backgroundImage: AssetImage('assets/100.jpg'),
-//                   radius: 60.0,
-//                 ),
-//               ),
-//               SizedBox(height:10.0),
-//               Divider(
-//                 height: 14.0,
-//                 color: Colors.grey,
-//               ),
-//               SizedBox(height:10.0),
-//               Text('NAME',
-//                 style: TextStyle(
-//                   fontSize: 15.0,
-//                   letterSpacing: 2.0,
-//                   color: Colors.grey,
-//                 ),),
-//               SizedBox(height:10.0),
-//               Text('SHRISHA SHRESTHA',
-//                 //Roboto Open sans Lato Oswald Raleway
-//                 style: GoogleFonts.raleway(
-//                     fontSize:27.0,
-//                     letterSpacing: 1.0,
-//                     fontWeight:FontWeight.w500,
-//                     color: Color.fromRGBO(234,200,87,1.0)),
-//               ),
-//               SizedBox(height:15.0),
-//               Text('ADDRESS',
-//                 style: TextStyle(
-//                   fontSize: 15.0,
-//                   letterSpacing: 2.0,
-//                   color: Colors.grey,
-//                 ),),
-//               SizedBox(height:10.0),
-//               Text('Madhyapur Thimi - 7',
-//                 style: TextStyle(
-//                     fontSize:20.0,
-//                     letterSpacing: 1.0,
-//                     color: Color.fromRGBO(234,200,87,1.0)
-//                 ),),
-//               SizedBox(height:15.0),
-//               Text('PROGRAMMER LEVEL',
-//                 style: TextStyle(
-//                   fontSize: 15.0,
-//                   letterSpacing: 2.0,
-//                   color: Colors.grey,
-//                 ),),
-//               SizedBox(height:10.0),
 //
-//               Text('$level',
-//                 style: TextStyle(
-//                     fontSize:20.0,
-//                     letterSpacing: 1.0,
-//                     color: Color.fromRGBO(234,200,87,1.0)
-//                 ),),
-//               SizedBox(height:15.0),
-//               Row(
-//                 children: <Widget>[
-//                   Padding(
-//                     padding: const EdgeInsets.all(4.0),
-//                     child: Icon(Icons.email,
-//                         color:Color.fromRGBO(234,200,87,1.0)),
-//                   ),
-//                   Text('shrishashrestha101@gmail.com',
-//                     style: TextStyle(
-//                       fontSize: 15.0,
-//                       letterSpacing: 2.0,
-//                       color: Colors.grey,
-//                     ),),
-//                 ],
-//               )
-//             ],
-//           ),
-//         ),
-//       ),
-//       floatingActionButton: FloatingActionButton(onPressed: () {
-//         setState(() {
-//           level+=1;
-//         });
-//       },
-//       backgroundColor: Color.fromRGBO(50,50,50,1.0),
-//         elevation: 5.0,
-//         child: Icon(Icons.add),
-//       ),
-//     );
+// Quote(author: 'Oscar Wilde', text: 'Be yourself; everyone else is already taken'),
+// Quote(author: 'Oscar Wilde', text: 'I have nothing to declare except my genius'),
+// Quote(author: 'Oscar Wilde', text: 'The truth is rarely pure and never simple')
+
