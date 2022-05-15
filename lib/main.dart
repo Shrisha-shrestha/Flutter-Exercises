@@ -44,10 +44,10 @@ class IDcard extends StatelessWidget {
                 color: Colors.grey,
               ),),
               SizedBox(height:10.0),
-              Text('Shrisha Shrestha',
+              Text('SHRISHA SHRESTHA',
                   //Roboto Open sans Lato Oswald Raleway
                 style: GoogleFonts.raleway(
-                    fontSize:30.0,
+                    fontSize:27.0,
                     letterSpacing: 1.0,
                     fontWeight:FontWeight.w500,
                     color: Color.fromRGBO(234,200,87,1.0)),
