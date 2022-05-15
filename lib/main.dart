@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main() => runApp(MaterialApp(
 home: IDcard(),
@@ -6,17 +7,16 @@ home: IDcard(),
 
 class IDcard extends StatelessWidget {
   const IDcard({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-     backgroundColor: Color.fromRGBO(31,31,31,1.0),
+     backgroundColor:Color.fromRGBO(31,31,31,1.0),
       appBar: AppBar(
-        backgroundColor: Colors.black87,
+        backgroundColor: Color.fromRGBO(35,33,35,1.0),
         title: Text('Student ID Card'),
         centerTitle: true,
         elevation: 35.0,
-        shadowColor: Colors.grey,
+        shadowColor: Colors.black45,
       ),
       body: Padding(
         padding: const EdgeInsets.all(10.0),
@@ -27,7 +27,7 @@ class IDcard extends StatelessWidget {
             children: <Widget>[
               Center(
                 child: CircleAvatar(
-                  backgroundImage: AssetImage('assets/600.jfif'),
+                  backgroundImage: AssetImage('assets/100.jpg'),
                   radius: 60.0,
                 ),
               ),
@@ -45,12 +45,18 @@ class IDcard extends StatelessWidget {
               ),),
               SizedBox(height:10.0),
               Text('Shrisha Shrestha',
-                style: TextStyle(
-                  fontSize:30.0,
-                  letterSpacing: 1.0,
-                  color: Colors.white,
-                ),),
-              SizedBox(height:10.0),
+                  //Roboto Open sans Lato Oswald Raleway
+                style: GoogleFonts.raleway(
+                    fontSize:30.0,
+                    letterSpacing: 1.0,
+                    fontWeight:FontWeight.w500,
+                    color: Color.fromRGBO(234,200,87,1.0)),
+                // style: TextStyle(
+                //   fontSize:30.0,
+                //   letterSpacing: 1.0,
+                //   color: Color.fromRGBO(234,200,87,1.0)
+                ),
+              SizedBox(height:15.0),
               Text('ADDRESS',
                 style: TextStyle(
                   fontSize: 15.0,
@@ -62,9 +68,9 @@ class IDcard extends StatelessWidget {
                 style: TextStyle(
                   fontSize:20.0,
                   letterSpacing: 1.0,
-                  color: Colors.white,
+                    color: Color.fromRGBO(234,200,87,1.0)
                 ),),
-              SizedBox(height:10.0),
+              SizedBox(height:15.0),
               Text('DATE OF BIRTH',
                 style: TextStyle(
                   fontSize: 15.0,
@@ -76,9 +82,9 @@ class IDcard extends StatelessWidget {
                 style: TextStyle(
                   fontSize:20.0,
                   letterSpacing: 1.0,
-                  color: Colors.white,
+                    color: Color.fromRGBO(234,200,87,1.0)
                 ),),
-              SizedBox(height:10.0),
+              SizedBox(height:15.0),
               Row(
                 children: <Widget>[
                   Padding(
@@ -90,7 +96,7 @@ class IDcard extends StatelessWidget {
                     style: TextStyle(
                       fontSize: 15.0,
                       letterSpacing: 2.0,
-                      color: Colors.white,
+                      color: Colors.grey,
                     ),),
                 ],
               )
