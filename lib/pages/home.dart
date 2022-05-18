@@ -29,7 +29,7 @@ class _HomeState extends State<Home> {
                         ),
                     ),
                     onPressed: (){
-                      Navigator.pushNamed(context, '/location');
+                      Navigator.pushNamed(context, '/loading');
                     },
                     icon: Icon(Icons.location_pin,color: Colors.white,),
                     label: Text('Edit Location')
